@@ -35,17 +35,6 @@ build/mvn -DskipTests clean package
 export PATH=$PATH:~/spark/bin
 ```
 
-[Install Gradle](https://gradle.org/install/) to build the .jar.
-
-> Here's an example install that worked on Centos 7:
-> ```
-> wget https://services.gradle.org/distributions/gradle-3.4.1-bin.zip
-> sudo mkdir /opt/gradle
-> sudo unzip -d /opt/gradle gradle-3.4.1-bin.zip
-> export PATH=$PATH:/opt/gradle/gradle-3.4.1/bin
-> gradle -v
-> ```
-
 Clone the repo.
 
 ```
@@ -80,6 +69,17 @@ Open the Spark UI which is normally at http://<INSERT_HOSTNAME>:4040. Follow the
 ## Running on YARN
 
 Alternatively it may be run on YARN by uncommenting line 19 in BikeDataAnalysis.java, and commenting line 18.
+
+[Install Gradle](https://gradle.org/install/) to build the .jar.
+
+> Here's an example install that worked on Centos 7:
+> ```
+> wget https://services.gradle.org/distributions/gradle-3.4.1-bin.zip
+> sudo mkdir /opt/gradle
+> sudo unzip -d /opt/gradle gradle-3.4.1-bin.zip
+> export PATH=$PATH:/opt/gradle/gradle-3.4.1/bin
+> gradle -v
+> ```
 
 From the root of the project, use Gradle to build the .jar.
 
