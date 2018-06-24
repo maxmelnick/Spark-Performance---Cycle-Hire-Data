@@ -12,18 +12,18 @@ public class BikeDataAnalysis {
 
     private static final int TWELVE_HOURS_IN_SECONDS = 12 * 60 * 60;
 
-    private static String file = "data/full-bike";
+    private static String file = "/tmp/data/full-bike";
 
     public static void main(String[] args) {
-        //localSparkJob();
-        yarnSparkJob();
+        localSparkJob();
+        //yarnSparkJob();
     }
 
     private static void localSparkJob() {
         SparkSession spark = SparkSession.builder()
                 .master("local[4]")
                 .appName("Spark Performance - Cycle Hire Analysis Bikes - MDB")
-                .config("spark.eventLog.dir", "file:///c:/spark/logs")
+                .config("spark.eventLog.dir", "file:///tmp/spark/logs")
                 .config("spark.eventLog.enabled", true)
                 .getOrCreate();
 
