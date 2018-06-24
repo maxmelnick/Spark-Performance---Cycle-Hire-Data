@@ -46,6 +46,14 @@ export PATH=$PATH:~/bin/spark
 > gradle -v
 > ```
 
+Clone the repo.
+
+```
+cd ~
+git clone https://github.com/maxmelnick/Spark-Performance---Cycle-Hire-Data.git
+cd Spark-Performance---Cycle-Hire-Data
+```
+
 ## Build the .jar
 
 From the root of the project, use Gradle to build the .jar.
