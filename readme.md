@@ -32,7 +32,7 @@ cd spark
 build/mvn -DskipTests clean package
 
 # add spark bin to the PATH so spark-submit can be called from anywhere
-export PATH=$PATH:~/bin/spark
+export PATH=$PATH:~/spark/bin
 ```
 
 [Install Gradle](https://gradle.org/install/) to build the .jar.
@@ -88,4 +88,4 @@ Alternatively it may be run on YARN by uncommenting line 19 in BikeDataAnalysis.
 
 ## Analyze performance in the Spark UI
 
-Open the Spark UI which is normally at http(s)://<INSERT_HOSTNAME>:4040. Follow the details in the [blog post](https://matdeb-sl.github.io/blog/2018/03/20/apache-spark-performance.html) for more information on what to look for.
+Open the Spark UI which is normally at http://<INSERT_HOSTNAME>:4040. Follow the details in the [blog post](https://matdeb-sl.github.io/blog/2018/03/20/apache-spark-performance.html) for more information on what to look for.
