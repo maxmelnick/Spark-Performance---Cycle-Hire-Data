@@ -1,4 +1,4 @@
-# Readme
+# Spark Performance Analysis Example
 This project splits the London Cycle Hire Data into two subsets, Weekend Journeys and Weekday Journeys, and saves the result as Parquet. This action is implemented twice, both in a slow and quick fashion, as discussed in this [blog post](https://matdeb-sl.github.io/blog/2018/03/20/apache-spark-performance.html), and will produce ~2GB of output data.
 
 ## Download the source data
