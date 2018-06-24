@@ -54,7 +54,32 @@ git clone https://github.com/maxmelnick/Spark-Performance---Cycle-Hire-Data.git
 cd Spark-Performance---Cycle-Hire-Data
 ```
 
-## Build the .jar
+
+
+## Run the code in local mode
+
+Spark-Submit on a local Spark instance, with a command as follows. Make sure there's at least 8g RAM and 6 cores available to Spark.
+
+```
+spark-submit   \
+--class com.scottlogic.blog.analysis.BikeDataAnalysis \
+--master local[*]   \
+--executor-memory 4g   \
+--num-executors 2 \
+--conf spark.executor.instances=2   \
+--total-executor-cores 6   \
+spark-shuffle-performance-1.0-SNAPSHOT.jar   10000
+```
+
+
+## Analyze performance in the Spark UI
+
+Open the Spark UI which is normally at http://<INSERT_HOSTNAME>:4040. Follow the details in the [blog post](https://matdeb-sl.github.io/blog/2018/03/20/apache-spark-performance.html) for more information on what to look for.
+
+
+## Running on YARN
+
+Alternatively it may be run on YARN by uncommenting line 19 in BikeDataAnalysis.java, and commenting line 18.
 
 From the root of the project, use Gradle to build the .jar.
 
@@ -68,24 +93,16 @@ This will create the .jar in the build/libs folder.
 cd build/libs
 ```
 
-## Run the code
-
-Spark-Submit on a local Spark instance, with a command as follows:
+Run the code.
 
 ```
 spark-submit   \
 --class com.scottlogic.blog.analysis.BikeDataAnalysis \
---master local[*]   \
+--master yarn   \
+--deploy-mode client  \
 --executor-memory 4g   \
 --num-executors 2 \
 --conf spark.executor.instances=2   \
 --total-executor-cores 6   \
 spark-shuffle-performance-1.0-SNAPSHOT.jar   10000
 ```
-
-Alternatively it may be run on YARN by uncommenting line 19 in BikeDataAnalysis.java, and commenting line 18.
-
-
-## Analyze performance in the Spark UI
-
-Open the Spark UI which is normally at http://<INSERT_HOSTNAME>:4040. Follow the details in the [blog post](https://matdeb-sl.github.io/blog/2018/03/20/apache-spark-performance.html) for more information on what to look for.
