@@ -37,7 +37,7 @@ export PATH=$PATH:~/bin/spark
 
 [Install Gradle](https://gradle.org/install/) to build the .jar.
 
-> Here's an example install that worked on Centos:
+> Here's an example install that worked on Centos 7:
 > ```
 > wget https://services.gradle.org/distributions/gradle-3.4.1-bin.zip
 > sudo mkdir /opt/gradle
@@ -75,7 +75,7 @@ spark-submit   \
 spark-shuffle-performance-1.0-SNAPSHOT.jar   10000
 ```
 
-Alternatively it may be run locally by uncommenting line 19 in BikeDataAnalysis.java, and commenting line 18.
+Alternatively it may be run on YARN by uncommenting line 19 in BikeDataAnalysis.java, and commenting line 18.
 
 
 ## Analyze performance in the Spark UI
