@@ -14,9 +14,9 @@ This project splits the London Cycle Hire Data into two subsets, Weekend Journey
 
 `run.sh` is a utility script that...
 
-1) Downloads the data
-2) Builds Spark from source
-3) Spark-Submits the code
+1. Downloads the data
+2. Builds Spark from source
+3. Spark-Submits the code
 
 ```
 ./run.sh
