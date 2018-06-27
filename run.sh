@@ -16,7 +16,7 @@ build/mvn -DskipTests clean package
 cd ../
 
 # Spark-Submit on a local Spark instance, with a command as follows. Make sure there's at least 8g RAM and 6 cores available to Spark.
-./spark/bin spark-submit   \
+./spark/bin/spark-submit   \
 --class com.scottlogic.blog.analysis.BikeDataAnalysis \
 --master local[*]   \
 --executor-memory 4g   \
