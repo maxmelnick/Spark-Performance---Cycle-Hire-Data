@@ -6,7 +6,8 @@ This project splits the London Cycle Hire Data into two subsets, Weekend Journey
 * [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) installed.
 * Enough space for the data and code files ~5GB
 * Machine with at least 8g RAM and 6 cores available
-* Tested on Centos 7. Use at your own risk otherwise.
+* Tested on Centos 7. Use at your own risk otherwise
+* User with permissions to `/tmp` directory
 
 
 ## Run the code
